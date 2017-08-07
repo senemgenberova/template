@@ -1,0 +1,92 @@
+﻿@using asc_general.Models;
+@model dynamic
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section foodblogCss {
+
+    <link rel="stylesheet" href="~/Public/css/food.css">
+
+}
+
+
+<!-- Strat Blog Details -->
+<div id="warpper-blog clearfix" class="warpper-blog section">
+    <div class="container">
+        <div class="row">
+            <!-- Strat Left Blog sidber -->
+            <div class="col-sm-12 col-md-8">
+                <div class="blog-warpper margin-bottom-30">
+                    <article class="inner-blog">
+                        <figure class="margin-bottom-30 image">
+                            <img class="img-responsive" src="~/Uploads/@Model.Blog.photo" alt="Blog Image">
+                            <div class="overly">
+                                <div class="overly-icon">
+                                    <a href="#" class="link"><span class="fa fa-arrows"></span></a>
+                                </div>
+                            </div>
+                        </figure>
+                        <h2 class="post-title color-flamingo"><a href="#">@Model.Blog.title</a></h2>
+                        <div class="lower-part">
+                            <div class="post-text">
+                             <p> @Model.Blog.text</p>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- End Article -->
+                </div>
+            </div><!-- End Left Left Sidber -->
+            <!--  Strat Blog Right Sidber -->
+            <div class="col-sm-12 col-md-4">
+                <div class="blog-sidber">
+                    <div class="clearfix"></div>
+                    <!-- End Search Form-->
+                    <div class="recent-post">
+                        <div class="sections">
+                            <h2>Diger Meqaleler</h2>
+                        </div>
+                        <ul class="recent-post-list list-inline">
+                            @foreach (blog blg in Model.otherblogs)
+                            {
+                                <li>
+                                    <a href="@Url.Action("index","singleblog",new { id =blg.id})"><img src="~/Uploads/@blg.photo" class="img-responsive" alt="blog01"></a>
+                                    <h6><a class="color-black" href="#">@blg.title </a></h6>
+                                    <span class="fa fa-clock-o color"></span> &nbsp; @blg.date
+                                </li>
+                            }
+                     
+                            @*<li>
+                                <a class="color-black" href="#"><img src="~/asc_temp/img/kasha.jpg" class="img-responsive" alt="blog02"></a>
+                                <h6><a href="#">Neque porro quisquam est, qui do- lorem ipsum </a></h6>
+                                <span class="fa fa-clock-o color"></span>&nbsp; 08 Sep 2016
+                            </li>
+                            <li>
+                                <a class="color-black" href="#"><img src="~/asc_temp/img/kasha.jpg" class="img-responsive" alt="blog03"></a>
+                                <h6><a href="#">Neque porro quisquam est, qui do- lorem ipsum </a></h6>
+                                <span class="fa fa-clock-o color"></span>&nbsp; 09 Sep 2016
+                            </li>
+                            <li>
+                                <a href="#"><img src="~/asc_temp/img/kasha.jpg" class="img-responsive" alt="blog03"></a>
+                                <h6><a class="color-black" href="#">Neque porro quisquam est, qui do- lorem ipsum </a></h6>
+                                <span class="fa fa-clock-o color"></span>&nbsp; 09 Sep 2016
+                            </li>*@
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                    <!-- End Recent Post -->
+
+
+                </div>
+            </div><!-- End Left Left Sidber -->
+        </div><!-- End Row -->
+    </div>
+</div>
+<!-- End Blog Details -->
+@section foodblogJs {
+<script src="~/asc_temp/school/js/vendor/jquery.js"></script>
+<script type="text/javascript" src="~/asc_temp/js/food.js"></script>
+
+    }
+

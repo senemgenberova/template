@@ -1,0 +1,124 @@
+.gallery-holder .main-heading-holder {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.about-school {
+  padding: 40px 0;
+  background: white; }
+  .about-school h2 {
+    font-family: 'Bubblegum Sans', cursive; }
+  .about-school strong {
+    color: #ffce72; }
+  .about-school span {
+    color: #ffce72; }
+
+.main-heading h2 {
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 50px; }
+.main-heading strong {
+  color: #ffce72; }
+.main-heading span {
+  color: #ffce72;
+  margin-top: 20px; }
+
+.section-padding-top {
+  padding: 50px 0 40px; }
+
+.filter-tags-holder ul li a {
+  padding: 5px 15px; }
+  .filter-tags-holder ul li a:focus {
+    text-decoration: none; }
+
+.filter-tags-holder ul li .selected {
+  border-bottom: 5px solid #ffce72; }
+
+.gallery-hover {
+  background-color: #ffce72; }
+
+
+.color-yellow {
+  color: #ffce72; }
+
+.section-title h4 {
+  font-size: 50px;
+  margin-bottom: 15px; }
+
+.blog {
+  background: white;
+  padding: 80px 0;}
+
+.blog .blog-post .contents-box .Continue-btn:hover {
+  background: #ffce72; }
+
+.image .overly {
+  background: rgba(255, 206, 114, 0.7); 
+
+}
+  .image .overly .overly-icon .fa {
+    color: #ffce72; }
+
+.warpper-blog {
+  padding: 60px 0; }
+  .warpper-blog .inner-blog .image .overly {
+    background: rgba(255, 206, 114, 0.7); }
+  .warpper-blog .inner-blog .post-title {
+    margin: 0; }
+    .warpper-blog .inner-blog .post-title a {
+      color: #ffce72;
+      font-family: 'Bubblegum Sans', cursive;
+      font-size: 35px; }
+
+.fa-li {
+  top: 0; }
+
+.tc-display-table-cell .gallery-hover a {
+    color: #FFCE72;
+}
+
+.tc-display-table-cell .gallery-hover a:hover {
+    color: #FFCE72;
+}
+
+
+@media only screen and (min-width: 481px) {
+    .about-school h2 {
+        font-size: 45px;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .margin-bottom-30-991 {
+        margin-bottom: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .blog {
+        padding: 25px 0;
+    }
+}
+
+@media only screen and (max-width: 679px) {
+    .filter-tags-holder ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .filter-tags-holder ul li {
+            margin: 0 !important;
+            padding-bottom: 0;
+        }
+
+    .gallery-holder .main-heading h2 {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .main-heading h2 {
+        font-size: 40px;
+    }
+}

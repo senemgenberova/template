@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="afeed3a0b55349a9b505774e6bfa5080" Name="Diagram1">
+        <EntityTypeShape EntityType="ascModel.blog" Width="1.5" PointX="9.5" PointY="4.875" />
+        <EntityTypeShape EntityType="ascModel.blog_category" Width="1.5" PointX="7.375" PointY="4.875" />
+        <AssociationConnector Association="ascModel.FK_blog_blog_category" />
+        <EntityTypeShape EntityType="ascModel.food_categories" Width="1.5" PointX="0.5" PointY="5.125" />
+        <EntityTypeShape EntityType="ascModel.food" Width="1.5" PointX="2.5" PointY="4.875" />
+        <AssociationConnector Association="ascModel.FK_foods_food_categories" />
+        <EntityTypeShape EntityType="ascModel.gym_blog" Width="1.5" PointX="4.75" PointY="4.875" />
+        <EntityTypeShape EntityType="ascModel.our_complex" Width="1.5" PointX="2.5" PointY="8" />
+        <EntityTypeShape EntityType="ascModel.region" Width="1.5" PointX="0.5" PointY="8" />
+        <AssociationConnector Association="ascModel.FK_our_complex_regions" />
+        <EntityTypeShape EntityType="ascModel.health_staff" Width="1.5" PointX="4.75" PointY="0.875" />
+        <EntityTypeShape EntityType="ascModel.lettr" Width="1.5" PointX="0.5" PointY="0.875" />
+        <EntityTypeShape EntityType="ascModel.name" Width="1.5" PointX="2.5" PointY="0.875" />
+        <AssociationConnector Association="ascModel.FK_names_lettrs" />
+        <EntityTypeShape EntityType="ascModel.cartoon" Width="1.5" PointX="7.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

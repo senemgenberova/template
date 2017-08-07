@@ -1,0 +1,145 @@
+img{
+    width:unset;
+    height: auto;
+}
+
+.sections {
+    border-bottom: 3px solid #ffce72;
+}
+.warpper-blog .inner-blog li i {
+    background: #ffce72;
+    border-radius: 6px;
+    font-size: 20px;
+    color: white;
+    width: 35px;
+    text-align: center;
+    height: 35px;
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid white;
+}
+
+.about-complex h4 .fa {
+    position: relative;
+    top: 2px;
+}
+
+    .warpper-blog .inner-blog li i:hover {
+        color: #ffce72;
+        background: white;
+        transition: all 0.6s;
+        border: 1px solid #ffce72;
+    }
+.warpper-blog {
+    background: white;
+}
+.sections {
+    margin-bottom: 20px;
+}
+
+    .sections h2 {
+        margin-bottom: 0;
+        color: #646A82;
+    }
+
+.warpper-blog .blog-sidber .recent-post ul > li > span {
+    color: #ffce72;
+}
+.warpper-blog .blog-sidber .recent-post ul > li {
+    border-bottom: 1px solid #ffce72;
+}
+
+    .warpper-blog .blog-sidber .recent-post ul > li > a > h3:hover {
+        color: #ffce72;
+    }
+.warpper-blog .inner-blog .post-title a{
+    color: #ffce72;
+}
+
+
+.about-complex h4 .fa {
+    color: #FFCE72;
+    font-size: 25px;
+}
+
+.fa-facebook:before {
+    position: relative;
+    top: 2px;
+}
+
+.fa-instagram:before {
+    position: relative;
+    top: 2px;
+}
+
+.owl-dots {
+    display:none; 
+}
+
+.post-text {
+    text-align: justify;
+}
+
+.recent-post-list li h3 {
+    float: left;
+    clear: both;
+    margin-right: 10px;
+    margin-bottom: 0;
+    color: #646A82;
+    transition: all .4s ease-in-out;
+}
+
+.about-complex h4 {
+    color: #646A82;
+}
+
+.recent-post-list li p {
+    margin: 0;
+    color: #5C5C5C;
+}
+
+@media only screen and (min-width:992px)  {
+    .owl-carousel .owl-item img {
+        height: 103px;
+    }
+}
+
+/*@media only screen and (max-width:991px) {
+    .owl-carousel .owl-item img {
+        height: 205px;
+    }
+}*/
+
+
+@media only screen and (max-width: 767px) {
+    .section {
+        padding: 50px 0;
+    }
+
+    .blog-warpper .inner-blog .about-complex {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .about-complex h2 {
+        margin-bottom: 10px;
+    }
+
+    .about-complex h4 {
+        margin-bottom: 10px;
+    }
+
+    iframe {
+        height: 300px;
+    }
+
+    .owl-dots {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .warpper-blog .inner-blog .post-title a {
+        font-size: 27px;
+    }
+}
