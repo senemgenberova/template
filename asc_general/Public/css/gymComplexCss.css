@@ -38,6 +38,30 @@
     color: #4CBCD4;
 }
 
+.pagination li a {
+    color: #4CBCD4;
+    border-color: #4CBCD4;
+}
+
+.pagination li a:hover {
+    background-color: #4CBCD4;
+    color: white;
+    border-color: #4CBCD4;
+}
+
+
+.pagination .active a {
+    background-color: #4CBCD4;
+    border-color: #4CBCD4;
+}
+
+.pagination .active a:hover {
+    background-color: #4CBCD4;
+    border-color: #4CBCD4;
+}
+
+
+
 @media screen and (max-width: 767px) {
     .complexInfo {
         border-bottom: 2px solid #4CBCD4;

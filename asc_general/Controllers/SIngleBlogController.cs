@@ -9,10 +9,10 @@ using asc_general.Models;
 
 namespace asc_general.Controllers
 {
-    public class SIngleBlogController : Controller
+    public class SingleBlogController : Controller
     {
         private DbAscEntities db = new DbAscEntities();
-        // GET: SIngleBlog
+        // GET: SingleBlog
         public ActionResult Index(int? id)
         {
 

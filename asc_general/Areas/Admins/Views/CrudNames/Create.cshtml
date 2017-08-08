@@ -64,15 +64,17 @@
 
 @section checkingLetterJS{
     <script>
-        $(".btn").submit(function () {
-            if ($("#name1").val().charAt(0) != $(".dropdown-content").find("li.active").text().toLowerCase()) {
-                $(".text-danger").text("Hərf düzgün seçilməyib.");
-                return false;
-            }
-            else {
-                console.log("duzgundur")
-                return true;
-            }
-        });
+        $(document).ready(function () {
+            $(".btn").submit(function () {
+                if ($("#name1").val().charAt(0) != $(".dropdown-content").find("li.active").text().toLowerCase()) {
+                    $(".text-danger").text("Hərf düzgün seçilməyib.");
+                    return false;
+                }
+                else {
+                    console.log("duzgundur")
+                    return true;
+                }
+            });
+        })
     </script>
 }

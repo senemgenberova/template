@@ -101,7 +101,7 @@
                                 if (region.our_complex.Count(c => c.edu_or_gym == Model.complexId.edu_or_gym) != 0)
                                 {
                                     <li>
-                                        <a href=@Url.Action("allComplex", "complex", new { id = region.id, complexType = Model.complexId.edu_or_gym })>
+                                        <a href=@Url.Action("allComplex", "complex", new { id = region.id, complexType = Model.complexId.edu_or_gym,page = 1})>
                                             <h3>@region.region1</h3>
                                             @{
                                                 if (Model.complexId.edu_or_gym == true)

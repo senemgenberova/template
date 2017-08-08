@@ -34,6 +34,29 @@
     color: #FFCE72;
 }
 
+.pagination li a {
+    color: #FFCE72;
+    border-color: #FFCE72;
+}
+
+.pagination li a:hover {
+    background-color: #FFCE72;
+    color: white;
+    border-color: #FFCE72;
+}
+
+
+.pagination .active  a {
+    background-color: #FFCE72;
+    border-color: #FFCE72;
+}
+
+.pagination .active a:hover {
+    background-color: #FFCE72;
+    border-color: #FFCE72;
+}
+
+
 @media screen and (max-width: 767px) {
     .complexInfo {
         border-bottom: 2px solid #FFCE72;

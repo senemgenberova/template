@@ -32,18 +32,20 @@ namespace asc_general.Controllers.Controllers
             return View(mymodel);
         }
 
-        public ActionResult allComplex(int? id,bool? complexType)
+        public ActionResult allComplex(int? id,bool? complexType,int? page)
         {
-            if(id == null || complexType == null)
+            if(id == null || complexType == null || page == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            dynamic data = new ExpandoObject();
-            data.Region = db.regions.Find(id);
-            data.otherRegions = db.regions.Where(r => r.id != id).ToList();
-            data.kindergardenByRegion = db.our_complex.Where(c => c.region_id == id && c.edu_or_gym == complexType).ToList();
-            data.kindergardenType = db.our_complex.Where(c => c.region_id == id && c.edu_or_gym == complexType).FirstOrDefault();
-            return View(data);
+            ViewBag.Region = db.regions.Find(id);
+            ViewBag.otherRegions = db.regions.Where(r => r.id != id).ToList();
+            ViewBag.kindergardenType = db.our_complex.Where(c => c.region_id == id && c.edu_or_gym == complexType).FirstOrDefault();
+
+            int pageNumber = (page ?? 1);
+            ViewBag.kindergardenByRegion = db.our_complex.OrderBy(o=>o.id).Where(c => c.region_id == id && c.edu_or_gym == complexType).ToPagedList(pageNumber, 5);
+
+            return View();
         }
 
     }

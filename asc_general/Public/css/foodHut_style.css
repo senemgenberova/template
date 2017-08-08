@@ -196,19 +196,6 @@ a {
     background-color: #f32a2a ;
 }
 
-/* Placeholder Color CSS */
-::-webkit-input-placeholder {
-    color: #dddddd !important;
-}
-::-moz-placeholder {
-    color: #dddddd !important;
-}
-:-ms-input-placeholder {
-    color: #dddddd !important;
-}
-:-moz-placeholder {
-    color: #dddddd !important;
-}
 
 
 /*-- Image --*/

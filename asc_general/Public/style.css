@@ -102,7 +102,7 @@ iframe{max-width:100%; border:none;}
 
 blockquote q{font-style:italic;}
 
-input[type=text], input[type=email]{width:100%; padding:16px 18px; font-size:16px; color:#a9a7a7; background:#FFFFFF; border:1px solid #eaeaea; outline:none; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px;}
+input[type=text], input[type=email]{width:100%; padding:16px 18px; font-size:16px; background:#FFFFFF; border:1px solid #eaeaea; outline:none; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px;}
 
 input[type=text]:focus, input[type=email]:focus, textarea:focus{box-shadow:0px 0px 10px #ddd; -webkit-box-shadow:0px 0px 10px #ddd; -moz-box-shadow:0px 0px 10px #ddd;}
 
@@ -1211,7 +1211,10 @@ header ul.dt-sc-social-icons li a.search:before{content:"\f002";position: relati
 
 header ul.dt-sc-social-icons li a.search span{border-color:#646a82; background:#646a82;}
 
-header ul.dt-sc-social-icons li a.search{border-color:#646a82;}
+header ul.dt-sc-social-icons li a.search {
+    border-color: #646a82;
+    cursor: pointer;
+}
 
 .dt-menu-toggle{
 	background: #A8B8CA;

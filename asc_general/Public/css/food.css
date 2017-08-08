@@ -1736,9 +1736,10 @@ a {
  }
  }
   @media only screen and (max-width: 991px) {
-.recent-post {
-    position: relative;
-}
+    .recent-post {
+        position: relative;
+        margin-top: 10px;
+    }
  }
 @media only screen and (max-width: 768px) {
     .bd-food-details {

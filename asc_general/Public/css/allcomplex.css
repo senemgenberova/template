@@ -14,6 +14,10 @@
     margin-bottom: 40px;
 }
 
+.singleComplex:last-child {
+    margin-bottom: 0;
+}
+
 .singleComplex .complexImg img {
     height: 120px;
     width: 100%;
