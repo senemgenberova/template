@@ -758,6 +758,7 @@
     <Content Include="Public\js\modernizr-custom.js" />
     <Content Include="Public\js\owl.carousel.min66f2.js" />
     <Content Include="Public\js\plugins66f2.js" />
+    <Content Include="Public\js\search.js" />
     <Content Include="Public\js\senem.js" />
     <Content Include="Public\js\shortcodes.js" />
     <Content Include="Public\js\simple.parallax.js" />

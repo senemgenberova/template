@@ -3,44 +3,42 @@
   padding: 40px 0 60px;
   background: white; }
 
-.input-group {
-    width: 67%; }
-.input-group input {
-    box-shadow: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-    border-bottom: 3px solid #646A82 !important;
-    padding: 15px 30px 15px 15px !important;
+.form-group {
+    width: 57%;
 }
-.input-group input:focus {
+
+.form-group .input-group input {
+    text-transform: uppercase;
+    border: 0;
     box-shadow: none;
-    border-color: #A8B8CA; }
-.input-group span {
-    background: none;
-    border: none;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    padding: 0;
-    color: #646A82;
-    cursor: pointer;
-    outline: none;
+    border-bottom: 3px solid #646A82;
 }
-.input-group span button {
-    border: none;
-    padding: 0;
-    position: absolute;
-    top: -4px;
-    left: -25px;
-    font-size: 20px; }
-.input-group span button:hover {
-    background: none; }
-.input-group span button:focus {
-    background: none;
-    outline: 0; }
-.input-group span button:active {
-    background: none;
+
+.form-group .input-group input:focus {
+    box-shadow: none;
+}
+
+.form-group .input-group-btn .btn {
+    font-size: 17px;
+    border-bottom: 3px solid #646A82;
+    border-radius: 0;
+    padding: 4px 12px;
+    color: #646A82;
+    background: white;
     outline: 0;
-    box-shadow:none;
+    box-shadow: none;
+}
+
+.input-group-btn .btn:hover {
+    background: white;
+}
+
+.input-group-btn .btn:focus {
+    outline: 0;
+}
+
+.input-group-btn .btn:active {
+    box-shadow: none;
 }
 
 .searchResult {
@@ -61,7 +59,6 @@
 
 .blog_title h2 a{
     text-transform: uppercase;
-
     color: #646A82;
 }
 
@@ -70,28 +67,70 @@
     border-color: #646A82;
 }
 
-    .pagination li a:hover {
-        background-color: #646A82;
-        color: white;
-        border-color: #646A82;
-    }
+.pagination li a:hover {
+    background-color: #646A82;
+    color: white;
+    border-color: #646A82;
+}
 
+.pagination li a:focus {
+    background-color: #646A82;
+    color: white;
+    border-color: #646A82;
+    outline:0;
+}
 
 .pagination .active a {
     background-color: #646A82;
     border-color: #646A82
 }
 
-    .pagination .active a:hover {
-        background-color: #646A82;
-        border-color: #646A82;
-    }
+.pagination .active a:hover {
+    background-color: #646A82;
+    border-color: #646A82;
+}
+
+.pagination .active:focus {
+    outline:0;
+}
+
+.pagination .active a:focus {
+    background-color: #646A82;
+    border-color: #646A82;
+    outline:0;
+}
+
+.pagination .disabled a {
+    color: #646A82;
+    border-color: #646A82;
+}
+
+.pagination .disabled a:hover {
+    color: #646A82;
+    border-color: #646A82;
+}
+
+.PagedList-ellipses:focus {
+    outline:0
+}
+
+.pagination .disabled a:focus {
+    color: #646A82;
+    border-color: #646A82;
+    outline:0;
+}
+
+.blog_category {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 17px;
+}
 
 
 @media only screen and (max-width: 767px) {
-    .input-group {
-    position: relative;
-    left: 20%; }
+    .form-group {
+        width:100%
+    }
     .input-group span {
       font-size: 18px; }
     .single_blog img {

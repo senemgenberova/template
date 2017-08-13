@@ -13,13 +13,16 @@ namespace asc_general.Controllers
     {
         // GET: Search
         private DbAscEntities db = new DbAscEntities();
-        public ActionResult Index(int? page, string searchString)
+        [HttpGet]
+        public ActionResult Index(int? id, string searchString)
         {
-            int pageNumber = page ?? 1;
-            ViewBag.searchStr = searchString;
-            if (page == null) {
+            if (id == null)
+            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
+            int pageNumber = id ?? 1;
+            ViewBag.searchStr = searchString;
 
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -27,25 +30,27 @@ namespace asc_general.Controllers
                 ViewBag.ResultCount = count;
                 if (count != 0)
                 {
-                    ViewBag.Searching = db.blogs.Where(b => b.title.Contains(searchString)).OrderBy(o => o.id).ToPagedList(pageNumber, 3);
+                    ViewBag.Searching = db.blogs.Where(b => b.title.Contains(searchString)).OrderBy(o => o.id).ToPagedList(pageNumber, 12);
+
                 }
                 else {
-                    ViewBag.NoResult = "Nəticə tapılmadı";
-                    page = 1;
+                    ViewBag.NoResult = "Belə bir nəticə tapılmadı";
+                    id = 1;
                 }
 
             }
             else {
-                ViewBag.EmptyString = "Nəticə tapılmadı";
-                page = 1;
+                ViewBag.EmptyString = "Axtarış daxil edilmədi";
+                id = 1;
             }
             return View();
         }
 
         [HttpPost]
-        public JsonResult Autocomplete(string searchString) {
-            var titles = db.blogs.Where(b => b.title.Contains(searchString)).OrderBy(o => o.id).Select(b=>b.title).ToList();
-            return Json(titles, JsonRequestBehavior.AllowGet);
+        public JsonResult LiveSearch(string searchString)
+        {
+            var blogTitles = db.blogs.Where(b => b.title.Contains(searchString)).Select(b => new { blogId = b.id, blogTitle = b.title.Substring(0,20) }).ToList();
+            return Json(blogTitles, JsonRequestBehavior.AllowGet);
         }
     }
 }

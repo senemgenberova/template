@@ -28,7 +28,10 @@
 
 *{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
 
-::selection{background-color:#008c99; color:#FFFFFF;}
+::selection {
+    background-color: #646A82;
+    color: #FFFFFF;
+}
 
 body{background:#f0f3f3; color:#5c5c5c; margin:0px; padding:0px; font-family:'Lato', sans-serif; font-size:14px; line-height:22px;}
 
@@ -1230,30 +1233,82 @@ footer .fa-envelope, footer .fa-phone, footer .fa-map-marker{
     font-size: 20px;
 }
 
-.search_tool{
-	display: none;
-	height: 70px;
-    border-top: 5px solid #646a82;
+.search_tool {
+    display: none;
+    height: 0;
     position: relative;
     top: -5px;
-    margin-left: -1px;
-	float: left;
+    float: right;
+    transition: all 0.6s ease-in-out
 }
 
-.search_tool input{
-	color: #646a82;
+.search_tool input {
+    color: #646a82;
     font-size: 17px;
-    padding: 21px 10px;
-	padding-right: 0;
-    width: 154px;
+    padding: 23px 5px 20px 10px;
+    width: 152px;
     border: none;
+    border-top: 5px solid #646a82;
     box-shadow: none;
+    border-radius: 0;
+    margin-right: -3px;
 }
 
 .search_tool input:focus{
 	box-shadow: none;
 }
 
+.search_tool button {
+    border-top: 5px solid #646a82;
+    color: white;
+    background: #646a82;
+    width: 50px;
+    height: 70px;
+    font-size: 16px;
+    padding: 0px 10px;
+}
+
+#searchingResult {
+    display: none;
+    position: relative;
+    z-index: 5;
+    margin-top: 2px;
+    overflow-y: auto;
+    width: 100%;
+    height: 408px;
+    -ms-overflow-style: none;
+}
+
+#searchingResult::-webkit-scrollbar {
+    display: none;
+}
+
+
+#searchingResult li {
+    background: white;
+    float: none;
+    display: block;
+    padding:0;
+    border-bottom: 3px solid #646A82;
+    text-transform: capitalize;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+#searchingResult li:first-child {
+    border-top: 3px solid #646A82;
+}
+
+#searchingResult li a p {
+    color: #646A82;
+    padding: 10px;
+    height:42px;
+    margin: 0
+}
+
+#searchingResult li a:hover, #searchingResult li a:focus {
+    text-decoration:none;
+}
 
 header .login-details .login a {
     display: inline-block;
@@ -1291,29 +1346,10 @@ footer aside h3{
 	color:#646a82;
 }
 
-@media only screen and (max-width:1240px){
-	header ul.dt-sc-social-icons li a{
-		width: 40px;
-		font-size: 14px;
-	}
-
-	header ul.dt-sc-social-icons li a.search:before{
-		bottom: 0px;
-	}
-
-	.search_tool input{
-		width: 130px;
-	}
-
-}
 
 @media only screen and (max-width:959px){
 	.contact .contact_info p {
 		font-size: 13px !important;
-	}
-
-	.search_tool input{
-		width: 110px;
 	}
 }
 
@@ -1336,12 +1372,6 @@ footer aside h3{
 	.contact .contact_info p {
 		font-size: 15px !important;
 	}
-
-	#icons{
-		display: flex;
-    	justify-content: center;
-		margin-bottom: 9px !important;
-	}
 }
 
 @media only screen and (max-width: 319px){
@@ -1350,3 +1380,60 @@ footer aside h3{
 	}
 }
 
+@media only screen and (min-width:768px) and (max-width:959px) {
+    .search_tool button {
+        width: 40px;
+        font-size: inherit;
+        padding: 0 5px;
+        height: 71px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .formSearch {
+        position:relative;
+    }
+
+    .formSearch .search_tool {
+        position:absolute !important;
+        top:39px;
+        left:91px;
+    }
+
+    .search_tool input {
+        width: 160px;
+        padding: 21px 5px 17px 10px;
+    }
+
+    .search_tool button {
+        height: 65px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .formSearch .search_tool {
+        left:26px !important;
+    }
+}
+
+@media only screen and (max-width: 319px) {
+    #icons li {
+        float:left !important;
+    }
+
+    .formSearch .search_tool {
+        left:15px !important;
+    }
+
+    .search_tool button {
+        width: 40px;
+    }
+
+    .search_tool input {
+        width:115px;
+    }
+
+    #searchingResult li a p {
+        height:unset !important;
+    }
+}

@@ -45,6 +45,11 @@
     border-color: #FFCE72;
 }
 
+.pagination li a:focus {
+    background-color: #FFCE72;
+    color: white;
+    border-color: #FFCE72;
+}
 
 .pagination .active  a {
     background-color: #FFCE72;
@@ -54,6 +59,31 @@
 .pagination .active a:hover {
     background-color: #FFCE72;
     border-color: #FFCE72;
+}
+
+.pagination .active a:focus {
+    background-color: #FFCE72;
+    border-color: #FFCE72;
+}
+
+.pagination .disabled a {
+    color: #FFCE72;
+    border-color: #FFCE72;
+}
+
+.pagination .disabled a:hover {
+    color: #FFCE72;
+    border-color: #FFCE72;
+}
+
+.PagedList-ellipses:focus {
+    outline: 0
+}
+
+.pagination .disabled a:focus {
+    color: #FFCE72;
+    border-color: #FFCE72;
+    outline: 0;
 }
 
 

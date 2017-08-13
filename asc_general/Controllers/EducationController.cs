@@ -17,7 +17,7 @@ namespace asc_general.Controllers
             dynamic datalar = new ExpandoObject();
             datalar.regions = db.regions.Take(4).ToList();
             datalar.complex = db.our_complex.Where(b => b.edu_or_gym == true).Take(8).ToList();
-            datalar.edu_blog = db.blogs.Where(e => e.blog_category.name.Equals("Tehsil")).OrderByDescending(e => e.date).Take(3).ToList();
+            datalar.edu_blog = db.blogs.Where(e => e.blog_category.name.Equals("təhsil")).OrderByDescending(e => e.date).Take(3).ToList();
             return View(datalar);
         }
     }

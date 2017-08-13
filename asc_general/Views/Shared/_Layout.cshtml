@@ -9,7 +9,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="~/Public/bootstrap/css/bootstrap.css">
     @RenderSection("herflerCss", false)
@@ -93,12 +92,8 @@
                     </nav>
                     <!--nav ends-->
 
+                    
                     <ul id="icons" class="dt-sc-social-icons">
-                        <li>
-                            <a class="dt-sc-tooltip-top search">
-                                <span class="fa fa-search"></span>
-                            </a>
-                        </li>
                         <li>
                             <a href="#" title="Facebook" class="dt-sc-tooltip-top facebook">
                                 <span class="fa fa-facebook"></span>
@@ -114,10 +109,22 @@
                                 <span class="fa fa-google-plus"></span>
                             </a>
                         </li>
-                        <div class="search_tool">
-                            <input type="text" placeholder="Axtar">
-                        </div>
+                        <li>
+                            <a class="dt-sc-tooltip-top search">
+                                <span class="fa fa-search"></span>
+                            </a>
+                        </li>
                     </ul>
+
+                    <form action="@Url.Action("Index", "Search", new { id = 1 })" method="get" class="formSearch" autocomplete="off">
+                        <div class="search_tool">
+                            <input type="text" placeholder="Axtar" id="searchString" name="searchString">
+                            <button type="submit" value="Submit">
+                                <span class="fa fa-search"></span>
+                            </button>
+                            <ul id="searchingResult" class="searchingResult"></ul>
+                        </div>
+                    </form>
                 </div>
             </div>
             <!--menu-container ends-->
@@ -211,6 +218,8 @@
     <script type="text/javascript" src="~/Public/js/custom.js"></script>
     <script type="text/javascript" src="~/Public/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="~/Public/js/senem.js"></script>
+    <script type="text/javascript" src="~/Public/js/search.js"></script>
+
     <!-- Layer Slider -->
     <script type="text/javascript" src="~/Public/js/jquery-transit-modified.js"></script>
     <script type="text/javascript" src="~/Public/js/layerslider.kreaturamedia.jquery.js"></script>
@@ -224,6 +233,7 @@
         lsjQuery(document).ready(function () { if (typeof lsjQuery.fn.layerSlider == "undefined") { lsShowNotice('layerslider_1', 'jquery'); } else { lsjQuery("#layerslider_4").layerSlider({ responsiveUnder: 1170, layersContainer: 1170, skinsPath: 'js/layerslider/skins/' }) } });
     </script>
 
+    
 </body>
 
 </html>

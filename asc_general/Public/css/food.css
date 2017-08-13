@@ -201,7 +201,7 @@ a {
 }
 
 /* Placeholder Color CSS */
-::-webkit-input-placeholder {
+/*::-webkit-input-placeholder {
     color: #dddddd !important;
 }
 ::-moz-placeholder {
@@ -212,7 +212,7 @@ a {
 }
 :-moz-placeholder {
     color: #dddddd !important;
-}
+}*/
 
 
 /*-- Image --*/

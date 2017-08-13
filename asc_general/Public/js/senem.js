@@ -1,40 +1,11 @@
 jQuery(document).ready(function ($) {
-    console.log(window.location.pathname);
     //menu searching starts
     var clickNumber = 0;
     var searchString = "";
 
-    $("#icons").find("li").eq(0).click(function () {
-        var search = $(".search");  
-        search.css({ "background-color": "#646a82", "color": "white", "border-color": "#646a82" });
-        $(this).siblings().hide();
+    $("#icons").find("li").eq(3).click(function () {
+        $(this).hide().siblings().hide();
         $(".search_tool").show();
-        search.addClass("no_hover").children().hide();
-        clickNumber++;
-
-        searchString = $(".search_tool").find("input").val();     
-        if (clickNumber === 2) {
-            if (window.location.pathname === "/search/index") {
-                search.attr("href", "?page=1&searchString=" + searchString);
-            }
-            else {
-                search.attr("href", "search/index?page=1&searchString=" + searchString);
-            }
-            clickNumber = 0;
-        }
-    });
-
-    $(".search_tool").find("input").keydown(function (event) {
-        searchString = $(".search_tool").find("input").val();
-
-        if (event.keyCode === 13) {
-            if (window.location.pathname === "/search/index") {
-                window.location.href = "?page=1&searchString=" + searchString;
-            }
-            else {
-                window.location.href = "search/index?page=1&searchString=" + searchString;
-            }
-        }
     });
 
     //Window clicking
@@ -45,9 +16,9 @@ jQuery(document).ready(function ($) {
             return true;
         }
         else {
-            $(".search").removeClass("no_hover").css({ "background-color": "", "color": "" }).children().show();
-            $(".search").parent().siblings().show();
+            $("#icons").find("li").show();
             $(".search_tool").hide().find("input").val("");
+            $("#searchingResult").find("li").remove().hide();
             clickNumber = 0;
         }
     });
@@ -83,47 +54,5 @@ jQuery(document).ready(function ($) {
         }
     }
 
-    // letter color change ends
-
-    $(".searching").find("button").click(function () {
-        searchString = $("#searchString").val();
-        $(this).children().attr("href", "?page=1&searchString=" + searchString);
-    });
-
-    $("#searchString").keydown(function (event) {
-        searchString = $("#searchString").val();
-        if (event.keyCode == 13) {
-            window.location.href = "?page=1&searchString=" + searchString;
-        }
-    })
-
-    $(function () {
-        var availableTags = [
-            "ActionScript",
-            "AppleScript",
-            "Asp",
-            "BASIC",
-            "C",
-            "C++",
-            "Clojure",
-            "COBOL",
-            "ColdFusion",
-            "Erlang",
-            "Fortran",
-            "Groovy",
-            "Haskell",
-            "Java",
-            "JavaScript",
-            "Lisp",
-            "Perl",
-            "PHP",
-            "Python",
-            "Ruby",
-            "Scala",
-            "Scheme"
-        ];
-        $("#searchString").autocomplete({
-            source: availableTags
-        });
-    });
+    // letter color change ends    
 });

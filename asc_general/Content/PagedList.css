@@ -6,7 +6,8 @@
 }
 
 .pagination > li {
-  display: inline;
+  display: inline-block;
+  padding-bottom:0;
 }
 
 .pagination > li > a,

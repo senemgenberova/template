@@ -103,8 +103,7 @@ button,
 .defult-btn,
 .theme-btn,
 .xs-btn,
-.pink-btn{ background: #dedede; min-width: 170px; height: 48px; text-transform: uppercase; line-height: 47px; text-align: center; border: 1px solid transparent; color: #fff;
-border-radius: 6px; color: #999; display: inline-block;}
+.pink-btn{ background: #dedede; text-transform: uppercase; line-height: 47px; text-align: center; border: 1px solid transparent; color: #fff; color: #999; display: inline-block;}
 .full-width{ width: 100%;}
 .xs-btn{ height: 35px; line-height: 34px; width: 120px;}
 

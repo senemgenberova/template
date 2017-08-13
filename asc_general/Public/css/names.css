@@ -33,4 +33,20 @@
       font-size: 17px;
       text-align: justify; }
 
+
+@media only screen and (max-width: 767px) {
+    .name h2 {
+        float: none !important;
+        text-align: center !important;
+    }
+
+        .name h2 i {
+            display: none !important;
+        }
+
+    .allNames .name p{
+        margin-bottom: 25px;
+    }
+}
+
 /*# sourceMappingURL=names.css.map */

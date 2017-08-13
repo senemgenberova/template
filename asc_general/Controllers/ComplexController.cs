@@ -43,7 +43,7 @@ namespace asc_general.Controllers.Controllers
             ViewBag.kindergardenType = db.our_complex.Where(c => c.region_id == id && c.edu_or_gym == complexType).FirstOrDefault();
 
             int pageNumber = (page ?? 1);
-            ViewBag.kindergardenByRegion = db.our_complex.OrderBy(o=>o.id).Where(c => c.region_id == id && c.edu_or_gym == complexType).ToPagedList(pageNumber, 5);
+            ViewBag.kindergardenByRegion = db.our_complex.OrderBy(o=>o.id).Where(c => c.region_id == id && c.edu_or_gym == complexType).ToPagedList(pageNumber, 10);
 
             return View();
         }
